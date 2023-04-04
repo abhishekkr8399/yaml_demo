@@ -1,0 +1,44 @@
+#string variables
+myself: Abhishek Kumar
+fruit: "apple"
+job: 'swe'
+bio: |
+hello world.
+my name is Abhishek.
+
+#write a single line in multiple lines
+message: >
+this will
+all be 
+in one line.
+#or
+message: !!str this will all be in one line.
+
+
+number: 1234
+marks: 23.31
+booleanValue: !!bool No # n, N, false, False, FALSE
+
+#automatically detect but you can specify also
+zero: !!int 0
+positiveNum: !!int 12
+negativeNum: !!int -12
+binaryNum: !!int 0b11001
+octalNum: !!int 06574
+hexa: !!int 0x45
+commaValue: !!int +540_000 #540,000
+exponential number: 6.023E56
+#floating point number
+marks: !!float 56.89
+infinite: !!float .infinite
+not a num: .nan
+
+#null
+surname: !!null Null # or null NULL ~
+~ : this is a null key.
+
+#dates and times
+date: !!timestamp 2023-02-11
+india time: 2023-02-11T02:59:43.10 +5:30
+no time zone: 2023-02-11T02:59:43.10
+

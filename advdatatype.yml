@@ -1,0 +1,82 @@
+student: !!seq
+ - marks
+ - name
+ - roll_no
+
+#or
+student: !!seq [marks, name, roll_no]
+
+#some of the keys of the seq will be empty-sparse seq
+sparse seq
+ - hey
+ - hello
+ - 
+ - wow
+ - Null
+  -sup
+
+#nested sequence
+-
+ - mango
+ - apple
+ - banana
+-
+ - roll_no
+ - marks
+ - date
+
+#key:value pairs are called maps
+!!map 
+
+#nested map
+name: abhishek
+role:
+  age: 21
+  job: student
+
+#or
+name: abhishek
+role: { age: 21, job: student }
+
+#pairs: keys may have dublicate values
+pair example: !!pairs
+ - job: student
+ - job: learner
+# this will be array of hashtables
+#or
+pair example: !!pairs [job: student, job: learner]
+
+# set will allow you to have unique values
+names: !!set
+ ? abhi
+ ? kumar
+ ? ravi
+
+ #dictionary !!omap
+ people: !!omap
+  - abhishek:
+     name: abhi kumar
+     age: 21
+     height: 678
+  - rahul:
+     name: rahul singh
+     age: 20
+     height: 600
+
+#reusing some properties using anchors
+liking: &likes
+  vegitable: pea 
+  fruit: apple
+
+person1:
+  name: abhishek
+  <<: *likes
+
+person2:
+  name: rahul
+  <<: *likes
+  fruit:mango
+
+person3:
+  name: ravi
+  <<: *likes

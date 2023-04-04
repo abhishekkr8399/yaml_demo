@@ -1,0 +1,21 @@
+#key-value
+"apple" : "i am red in color"
+1: "this is integer"
+#or
+{mango: "yellow fruit", age: 56}
+---
+#lists
+-apple
+-Apple
+-mango
+-banana
+---
+#block
+cities:
+ -new delhi
+ -chennai
+ -mumbai
+ -gujrat
+#or
+cities: [new delhi, chennai, mumbai, gujrat]
+...
